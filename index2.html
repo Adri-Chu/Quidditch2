@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Snitches - Puntuación</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+</head>
+
+<body>
+    <div id="hud">
+        <div class="hud-item">Puntos: <span id="score">0</span></div>
+        <div class="hud-item">Snitches: <span id="snitches">0</span></div>
+        <div class="hud-item">
+            Tiempo: <span id="timer">60</span>s
+            <div id="timeBarContainer">
+                <div id="timeBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="snitchMessage">¡Una Snitch Dorada ha aparecido!</div>
+
+    <canvas id="game"></canvas>
+
+    <div id="startScreen" class="screen">
+        <h1>JUEGO NUEVO</h1>
+        <div class="instructions">
+            <p><strong>OBJETIVO:</strong> Consigue la mayor puntuación en 60 segundos.</p>
+            <p>✦ Atrapa Snitches: <strong>+100 pts</strong></p>
+            <p>☾ Golpe de Bludger: <strong>-50 pts</strong> (¡Cuidado, no hay vidas!)</p>
+        </div>
+        <div class="controls">
+            Cantidad de Bludgers:
+            <button id="minusBludgers" class="btn-small">-</button>
+            <span id="bludgerCount">5</span>
+            <button id="plusBludgers" class="btn-small">+</button>
+        </div>
+        <button id="startButton" class="btn-primary">COMENZAR PARTIDA</button>
+    </div>
+
+    <div id="pauseScreen" class="screen" style="display: none;">
+        <h2>JUEGO PAUSADO</h2>
+        <button id="resumeButton" class="btn-primary">REANUDAR</button>
+        <button id="restartPauseButton" class="btn-secondary">VOLVER AL MENÚ</button>
+    </div>
+
+    <div id="gameOverScreen" class="screen" style="display: none;">
+        <div id="resultIcon" class="icon">⏱</div>
+        <h2 id="resultTitle">¡TIEMPO FINALIZADO!</h2>
+        <p class="final-score-text">Tu Puntuación: <span id="finalScore">0</span></p>
+
+        <div class="leaderboard-container">
+            <h3>🏆 MEJORES PUNTUACIONES 🏆</h3>
+            <ul id="leaderboardList"></ul>
+        </div>
+
+        <button id="restartButton" class="btn-primary">VOLVER A JUGAR</button>
+    </div>
+    <script src="js/script2.js"></script>
+</body>
+
+</html>
